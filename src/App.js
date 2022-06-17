@@ -1,9 +1,17 @@
 import "./App.css";
+import { MainPage, WelcomePage } from "./pages/index";
+import { useCommonContext } from "./context/CommonContext";
+import { useEffect } from "react";
 
 function App() {
+  const { name, setName } = useCommonContext();
+  useEffect(() => {
+    setName(localStorage.getItem("username"));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className='App'>
-      hello
+      {name ? <MainPage /> : <WelcomePage />}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

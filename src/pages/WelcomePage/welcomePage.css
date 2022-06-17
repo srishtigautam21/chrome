@@ -1,0 +1,23 @@
+.welcome-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.h-100 {
+  min-height: 100vh;
+}
+.welcome-input {
+  border: none;
+  border-bottom: 2px solid var(--COLOR-BLACK);
+  padding: 1rem;
+  font-size: 2rem;
+}
+.welcome-input:focus {
+  outline: none;
+}
+.welcome-message {
+  font-size: 3rem;
+  font-weight: 400;
+}
