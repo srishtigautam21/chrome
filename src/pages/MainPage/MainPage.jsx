@@ -1,6 +1,6 @@
 import { useCommonContext } from "../../context/CommonContext";
 import "./mainPage.css";
-import { Greetings } from "../../component/Greetings";
+import { Greetings, Todo } from "../../component";
 
 const MainPage = () => {
   const { name, setName, mainFocus, setMainFocus } = useCommonContext();
@@ -16,13 +16,13 @@ const MainPage = () => {
   };
 
   const editNameHandler = () => {
-    setName(null);
-    localStorage.setItem("username", null);
+    setName("");
+    localStorage.setItem("username", "");
   };
 
   const editFocusHandler = () => {
-    setMainFocus(null);
-    localStorage.setItem("focus", null);
+    setMainFocus("");
+    localStorage.setItem("focus", "");
   };
 
   return (
@@ -46,8 +46,8 @@ const MainPage = () => {
         )}
       </div>
       {/* <Weather />
-      <Quotes />
-      <Todo /> */}
+      <Quotes /> */}
+      <Todo />
       {name !== null && (
         <button className='btn btn-name' onClick={() => editNameHandler()}>
           Edit Name

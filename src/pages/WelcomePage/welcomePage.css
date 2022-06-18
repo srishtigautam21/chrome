@@ -10,14 +10,22 @@
 }
 .welcome-input {
   border: none;
-  border-bottom: 2px solid var(--COLOR-BLACK);
+  border-bottom: 2px solid var(--COLOR-WHITE);
   padding: 1rem;
   font-size: 2rem;
+  color: var(--COLOR-WHITE);
+  background-color: transparent;
 }
 .welcome-input:focus {
   outline: none;
+  background-color: transparent;
 }
 .welcome-message {
   font-size: 3rem;
   font-weight: 400;
+  color: var(--COLOR-WHITE);
+}
+.press-enter {
+  color: var(--COLOR-WHITE);
+  font-style: italic;
 }

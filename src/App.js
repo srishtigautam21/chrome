@@ -1,31 +1,50 @@
 import "./App.css";
 import { MainPage, WelcomePage } from "./pages/index";
 import { useCommonContext } from "./context/CommonContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+  const [imageUrl, setImageUrl] = useState();
   const { name, setName } = useCommonContext();
+  const fetchUnsplashApi = async () => {
+    try {
+      const { data } = await axios.get(
+        "https://api.unsplash.com/photos/random/?client_id=zJ9f9avxrS-Tt2UYC4hK1eh7vRmny7QUiLxMQN9l4S8&&orientation=landscape&&query=travel%20dark"
+        // https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&&orientation=landscape&&query=stars%20dark
+      );
+      console.log(data?.urls?.regular);
+      setImageUrl(data?.urls?.regular);
+    } catch (e) {
+      console.log(e);
+    }
+    // setImageUrl(result.urls.small);
+  };
+  // useEffect(() => {
+  //   fetch(
+  //     "https://api.unsplash.com/photos/?client_id=zJ9f9avxrS-Tt2UYC4hK1eh7vRmny7QUiLxMQN9l4S8"
+  // `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&&orientation=landscape&&query=mountains%20light`
+  // `https://api.unsplash.com/search/photos?page=1&query=nature&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((value) => setImageUrl(value.urls.regular));
+  // }, []);
+  useEffect(() => {
+    fetchUnsplashApi();
+  }, []);
   useEffect(() => {
     setName(localStorage.getItem("username"));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className='App'>
+    <div
+      className='h-100'
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        backgroundSize: "cover",
+      }}
+    >
       {name ? <MainPage /> : <WelcomePage />}
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }

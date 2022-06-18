@@ -13,6 +13,7 @@
 .greeting-wrapper {
   display: flex;
   gap: 1rem;
+  color: var(--COLOR-WHITE);
 }
 
 .weather-wrapper {
@@ -31,6 +32,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1.5rem;
+  color: var(--COLOR-WHITE);
 }
 
 .btn-name {
@@ -47,13 +49,17 @@
 .main-focus-input {
   padding: 1rem;
   border: none;
-  border-bottom: 1.5px solid var(--COLOR-BLACK);
+  border-bottom: 1.5px solid var(--COLOR-WHITE);
   margin: 1rem;
+  background-color: transparent;
+  color: var(--COLOR-WHITE);
 }
+
 .main-focus-input:focus {
   outline: none;
 }
 .main-focus {
   font-size: 2rem;
   margin: 1rem;
+  color: var(--COLOR-WHITE);
 }

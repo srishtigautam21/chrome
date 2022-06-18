@@ -21,6 +21,7 @@ const WelcomePage = () => {
           e.code === "Enter" && e.target.value !== "" && nameInputHandler(e)
         }
       />
+      <small className='press-enter'>Press Enter</small>
     </div>
   );
 };
