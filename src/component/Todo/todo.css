@@ -26,6 +26,7 @@
   font-size: 2rem;
   width: 100%;
   text-align: center;
+  color: var(--COLOR-WHITE);
 }
 
 .list-display {
@@ -45,18 +46,20 @@
   cursor: pointer;
   font-size: 2rem;
   overflow-wrap: break-word;
+  color: var(--COLOR-WHITE);
 }
 
 .list-display input {
-  --size: 1.75rem;
+  /* --size: 1.75rem;
   width: var(--size);
-  height: var(--size);
+  height: var(--size); */
   margin-right: 1rem;
   cursor: pointer;
 }
 
 .delete-completed-btn {
-  background: black;
+  background: var(--COLOR-BLACK);
+  color: var(--COLOR-WHITE);
   padding: 10px;
   font-weight: bold;
   border-radius: 10px;

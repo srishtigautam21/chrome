@@ -1,6 +1,6 @@
 import { useCommonContext } from "../../context/CommonContext";
 import "./mainPage.css";
-import { Greetings, Todo } from "../../component";
+import { Greetings, Todo, Time, Weather } from "../../component";
 
 const MainPage = () => {
   const { name, setName, mainFocus, setMainFocus } = useCommonContext();
@@ -27,7 +27,7 @@ const MainPage = () => {
 
   return (
     <div className='h-100 main-page-container'>
-      {/* <Clock /> */}
+      <Time />
       <div className='greeting-wrapper'>
         <Greetings />, {name}.
       </div>
@@ -45,8 +45,8 @@ const MainPage = () => {
           />
         )}
       </div>
-      {/* <Weather />
-      <Quotes /> */}
+      <Weather />
+      {/* <Quotes /> */}
       <Todo />
       {name !== null && (
         <button className='btn btn-name' onClick={() => editNameHandler()}>
