@@ -1,0 +1,41 @@
+.weather-wrapper {
+  font-size: 2rem;
+  text-align: right;
+  color: var(--COLOR-WHITE);
+  display: flex;
+  flex-direction: column;
+}
+
+.temp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--COLOR-WHITE);
+}
+
+.city-search {
+  display: block;
+  font-size: 1.75rem;
+  width: 15rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--COLOR-WHITE);
+  color: var(--COLOR-WHITE);
+}
+
+.city-search::placeholder {
+  color: var(--COLOR-WHITE);
+}
+.weather-wrapper button {
+  background-color: transparent;
+  border: none;
+  color: var(--BOX-SHADOW-LIGHTER);
+  text-align: end;
+  margin-top: 5px;
+}
+.weather-wrapper button:hover {
+  cursor: pointer;
+  color: var(--COLOR-PRIMARY);
+}

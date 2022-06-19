@@ -1,0 +1,69 @@
+.main-page-container {
+  font-size: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-wrapper {
+  font-size: 8rem;
+  color: var(--COLOR-WHITE);
+}
+
+.greeting-wrapper {
+  display: flex;
+  gap: 1rem;
+  color: var(--COLOR-WHITE);
+}
+
+.weather-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.btn {
+  position: fixed;
+  bottom: 10px;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--COLOR-WHITE);
+}
+
+.btn-name {
+  right: 10px;
+}
+
+.btn-focus {
+  right: 90px;
+}
+
+.btn:hover {
+  color: var(--COLOR-PRIMARY);
+}
+.main-focus-input {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1.5px solid var(--COLOR-WHITE);
+  margin: 1rem;
+  background-color: transparent;
+  color: var(--COLOR-WHITE);
+}
+
+.main-focus-input:focus {
+  outline: none;
+}
+.main-focus {
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--COLOR-WHITE);
+}
+.main-focus-input::placeholder {
+  color: var(--COLOR-WHITE);
+}
