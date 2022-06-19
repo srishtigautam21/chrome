@@ -75,38 +75,6 @@ const Todo = () => {
           Add Todo List
         </button>
       )}
-      {/* //   <div className='todo-heading'>Todo List</div>
-    //   <input
-    //     className='todo-input'
-    //     onChange={(e) => setInput(e.target.value)}
-    //     onKeyDown={(e) =>
-    //       e.code === "Enter" && e.target.value !== "" && addTodo()
-    //     }
-    //     value={input}
-    //   />
-    //   <div className='list-display'>
-    //     {todoList.map((item, index) => (
-    //       <label
-    //         key={index}
-    //         style={{ textDecoration: item.checked ? "line-through" : "none" }}
-    //       >
-    //         <input
-    //           type='checkbox'
-    //           checked={item.checked}
-    //           onChange={() => toggleChecked(item)}
-    //         />
-    //         {item.todo}
-    //       </label>
-    //     ))}
-    //   </div>
-    //   {todoList.length > 0 && (
-    //     <button
-    //       className='delete-completed-btn'
-    //       onClick={() => deleteCheckedTodo()}
-    //     >
-    //       Delete Completed Task
-    //     </button>
-    //   )} */}
     </div>
   );
 };
