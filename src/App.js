@@ -9,8 +9,9 @@ function App() {
   const { name, setName } = useCommonContext();
   const fetchUnsplashApi = async () => {
     try {
+      // zJ9f9avxrS-Tt2UYC4hK1eh7vRmny7QUiLxMQN9l4S8
       const { data } = await axios.get(
-        "https://api.unsplash.com/photos/random/?client_id=zJ9f9avxrS-Tt2UYC4hK1eh7vRmny7QUiLxMQN9l4S8&&orientation=landscape&&query=travel%20dark"
+        `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&&orientation=landscape&&query=travel%20dark`
         // https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&&orientation=landscape&&query=stars%20dark
       );
 
@@ -33,6 +34,7 @@ function App() {
       style={{
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
+        opacity: 0.8,
       }}
     >
       {name ? <MainPage /> : <WelcomePage />}
