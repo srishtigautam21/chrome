@@ -50,9 +50,6 @@
 }
 
 .list-display input {
-  /* --size: 1.75rem;
-  width: var(--size);
-  height: var(--size); */
   margin-right: 1rem;
   cursor: pointer;
 }
