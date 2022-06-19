@@ -17,9 +17,9 @@ const Weather = () => {
             city !== null
               ? `q=${city}`
               : `lat=${coordinates.latitude}&lon=${coordinates.longitude}`
-          }&APPID=f3b54ecb4e9937fcb8377bee47363beb`
+          }&appid=f3b54ecb4e9937fcb8377bee47363beb`
         ));
-      //   console.log(response.data.name);
+      // console.log(response.data.name);
       setWeather({
         location: response.data.name,
         country: response.data.sys.country,
@@ -57,8 +57,6 @@ const Weather = () => {
   return (
     <div
       className='weather-wrapper'
-      //   onMouseEnter={() => setIsInputVisible(true)}
-      //   onMouseLeave={() => setIsInputVisible(false)}
       onKeyDown={(e) => e.code === "Enter" && setIsInputVisible(false)}
     >
       {weather !== null && (
