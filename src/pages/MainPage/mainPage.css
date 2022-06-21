@@ -67,3 +67,6 @@
 .main-focus-input::placeholder {
   color: var(--COLOR-WHITE);
 }
+.date {
+  color: var(--COLOR-WHITE);
+}

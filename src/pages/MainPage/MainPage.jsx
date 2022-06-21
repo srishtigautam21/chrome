@@ -25,9 +25,14 @@ const MainPage = () => {
     localStorage.setItem("focus", "");
   };
 
+  const getDate = () => {
+    return new Date().toDateString();
+  };
+
   return (
     <div className='h-100 main-page-container'>
       <Time />
+      <div className='date'>{getDate()}</div>
       <div className='greeting-wrapper'>
         <Greetings />, {name}.
       </div>
