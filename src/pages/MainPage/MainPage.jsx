@@ -51,7 +51,7 @@ const MainPage = () => {
         )}
       </div>
       <Weather />
-      {/* <Quotes /> */}
+
       <Todo />
       {name !== null && (
         <button className='btn btn-name' onClick={() => editNameHandler()}>
