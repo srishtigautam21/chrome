@@ -1,6 +1,6 @@
 import { useCommonContext } from "../../context/CommonContext";
 import "./mainPage.css";
-import { Greetings, Todo, Time, Weather } from "../../component";
+import { Greetings, Todo, Time, Weather, Quotes } from "../../component";
 
 const MainPage = () => {
   const { name, setName, mainFocus, setMainFocus } = useCommonContext();
@@ -50,8 +50,8 @@ const MainPage = () => {
           />
         )}
       </div>
+      <Quotes />
       <Weather />
-
       <Todo />
       {name !== null && (
         <button className='btn btn-name' onClick={() => editNameHandler()}>
