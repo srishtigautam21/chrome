@@ -69,4 +69,5 @@
 }
 .date {
   color: var(--COLOR-WHITE);
+  font-size: 3rem;
 }
